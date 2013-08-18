@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+.icon_buggy {
+	background: url('../img/common/image.gif') no-repeat;
+	height: 16px;
+	width: 16px;
+}

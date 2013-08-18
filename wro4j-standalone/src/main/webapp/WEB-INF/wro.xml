@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups xmlns="http://www.isdc.ro/wro">
-
+<!-- 
     <group name="jshint">
         <js>/static/jshint/*.js</js>
     </group>
@@ -15,5 +15,10 @@
     <group name="webjar">
         <js>webjar:jquery.js</js>
     </group>
+     -->
+    <group name="dataUriBug">
+        <css>/static/dataUriBug/css/client.css</css>
+    </group>
+    
     
 </groups>

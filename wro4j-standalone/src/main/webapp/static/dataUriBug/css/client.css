@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+@IMPORT url("common.css");
+
+.icon_ajax_loader {
+	background: url('../img/common/ajax-loader.gif') no-repeat;
+	height: 16px;
+	width: 16px;
+}
+

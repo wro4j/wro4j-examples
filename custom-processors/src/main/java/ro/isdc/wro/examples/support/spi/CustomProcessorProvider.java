@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ro.isdc.wro.examples.support.processor.CustomCssUrlRewritingProcessor;
-import ro.isdc.wro.model.resource.processor.ResourcePostProcessor;
-import ro.isdc.wro.model.resource.processor.ResourcePreProcessor;
+import ro.isdc.wro.model.resource.processor.ResourceProcessor;
 import ro.isdc.wro.model.resource.processor.support.ProcessorProvider;
 
 
@@ -17,7 +16,7 @@ import ro.isdc.wro.model.resource.processor.support.ProcessorProvider;
 public class CustomProcessorProvider
     implements ProcessorProvider {
   @Override
-  public Map<String, ResourcePreProcessor> providePreProcessors() {
+  public Map<String, ResourceProcessor> providePreProcessors() {
     final Map<String, ResourcePreProcessor> map = new HashMap<String, ResourcePreProcessor>();
     map.put(CustomCssUrlRewritingProcessor.ALIAS, new CustomCssUrlRewritingProcessor());
     return map;

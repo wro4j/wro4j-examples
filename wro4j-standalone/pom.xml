@@ -41,7 +41,7 @@
             <plugin>
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
-                <version>1.6.3</version>
+                <version>1.7.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -50,7 +50,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <ignoreMissingResources>false</ignoreMissingResources>
+                    <ignoreMissingResources>false</ignoreMissingResources>		    	
                     <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
                 </configuration>
             </plugin>
@@ -67,7 +67,7 @@
                         <goals>
                             <goal>csslint</goal>
                         </goals>
-                        <configuration>
+                        <configuration>			    
                             <options>box-model, import</options>
                             <targetGroups>cssGroup</targetGroups>
                         </configuration>
@@ -80,6 +80,7 @@
                             <goal>jshint</goal>
                         </goals>
                         <configuration>
+			    
                             <options>undef</options>
                             <targetGroups>jshint</targetGroups>
                         </configuration>

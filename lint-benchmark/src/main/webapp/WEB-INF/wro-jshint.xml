@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro">
+    <!-- used for maven wro4j plugin to determine which js files are subject to jshint checks -->
+    <group name='core-javascript'>
+        <js>/blades/**.js</js>
+    </group>
+</groups>

@@ -39,7 +39,7 @@ public class CustomCssUrlRewritingProcessor
       final String locale = extractLocale(uri);
       String newImageUrl = imageUrl;
       if (locale != null) {
-        newImageUrl = String.format("/%s/%s", locale, imageUrl);
+        newImageUrl = locale + imageUrl;
       }
       return super.replaceImageUrl(cssUri, newImageUrl);
     } catch (final WroRuntimeException e) {

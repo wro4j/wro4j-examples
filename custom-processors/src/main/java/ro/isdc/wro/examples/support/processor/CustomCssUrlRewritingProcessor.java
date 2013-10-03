@@ -27,10 +27,15 @@ public class CustomCssUrlRewritingProcessor
   @Override
   protected String replaceImageUrl(final String cssUri, final String imageUrl) {
     try {
-      return super.replaceImageUrl(cssUri, imageUrl);
+      final String replacedCssUri = makeSecure(cssUri);
+      return super.replaceImageUrl(replacedCssUri, imageUrl);
     } catch (final WroRuntimeException e) {
       LOG.warn("Original replacement failed because: {}. Leaving imageUrl unchanged.", e.getMessage());
       return imageUrl;
     }
+  }
+
+  private String makeSecure(final String cssUri) {
+    return cssUri.replace("http://", "https://");
   }
 }

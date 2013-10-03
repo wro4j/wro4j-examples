@@ -3,14 +3,12 @@ package ro.isdc.wro.examples.support.processor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ro.isdc.wro.WroRuntimeException;
 import ro.isdc.wro.model.resource.processor.impl.css.CssUrlRewritingProcessor;
 import ro.isdc.wro.util.Ordered;
 
 
 /**
- * A custom implementation of {@link CssUrlRewritingProcessor} which doesn't fail when imageUrl replacement fails
- * (leaving the image url unchanged).
+ * A custom implementation of {@link CssUrlRewritingProcessor} which use https scheme for all external resources.
  *
  * @author Alex Objelean
  */
@@ -26,13 +24,8 @@ public class CustomCssUrlRewritingProcessor
 
   @Override
   protected String replaceImageUrl(final String cssUri, final String imageUrl) {
-    try {
-      final String replacedCssUri = makeSecure(cssUri);
-      return super.replaceImageUrl(replacedCssUri, imageUrl);
-    } catch (final WroRuntimeException e) {
-      LOG.warn("Original replacement failed because: {}. Leaving imageUrl unchanged.", e.getMessage());
-      return imageUrl;
-    }
+    final String replacedCssUri = makeSecure(cssUri);
+    return super.replaceImageUrl(replacedCssUri, imageUrl);
   }
 
   private String makeSecure(final String cssUri) {

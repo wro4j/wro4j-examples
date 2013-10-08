@@ -1,0 +1,22 @@
+/* Global Vars */
+$spriteBg: url(../images/sprite.png);
+$spriteBgx2: url(../images/sprite@x2.png);
+$btnImgB64: "";
+$btnBg-start-colour: #f9f9f9;
+$btnBg-end-colour: #e6e6e6;
+
+//@mixin background-gradient($from, $to){ background: $from; @include background-image(linear-gradient($from, $to)); }
+@mixin background-gradient($from, $to){ background-color: $from; @include filter-gradient($from, $to, vertical); $experimental-support-for-svg: true; @include background-image(linear-gradient(top,  $from 0%, $to 100%)); }
+@mixin box-sizing($type){ -webkit-box-sizing: $type; -moz-box-sizing: $type; box-sizing: $type; }
+@mixin item-span-defaults {
+  span {
+          &.img { float: left; margin: 11px 16px;
+            img { @include border-radius(5px); }
+          }
+          &.details { float: left; padding: 10px 0; font-size: 14px; }
+          &.date { float: right; padding: 10px 10px 0 ; font-size: 13px; }
+          &.bold { font-weight: bold; }
+          &.italic { font-weight: normal; font-style: italic; color: #b2b4b5; }
+          &.line { float: left; clear: both; }
+  }
+}

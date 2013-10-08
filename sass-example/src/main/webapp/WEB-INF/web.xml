@@ -1,0 +1,29 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>MAS Front-end Web App</display-name>
+ 
+ 	<filter>
+		 <filter-name>WebResourceOptimizer</filter-name>
+		 <filter-class>
+		   ro.isdc.wro.http.WroFilter
+		 </filter-class>
+	</filter>
+	
+	<filter-mapping>
+	  <filter-name>WebResourceOptimizer</filter-name>
+	  <url-pattern>/wro/*</url-pattern>
+	</filter-mapping>
+	<!-- 
+	<listener>
+    	<listener-class>ro.isdc.wro.http.WroServletContextListener</listener-class>
+	</listener>
+	 -->
+	
+  <welcome-file-list>
+       <welcome-file>login.html</welcome-file>
+   </welcome-file-list>
+    
+</web-app>

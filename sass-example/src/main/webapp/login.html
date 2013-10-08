@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if IE 10]><html class="lt-ie11" lang="en"> <![endif]-->
+<!--[if gt IE 10]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title></title>
+      <link rel="stylesheet" type="text/css" href="./wro/group1.css" />
+      <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+  <body>
+      <div class="wrapper">
+        <div class="main_header">
+    <div class="inner">
+        <div class="logo">
+            <a href="/app/">MyAdminSorted</a>
+        </div>
+        <div class="actions">
+          <a class="bbtn_red" href="/">
+            <span class="text">Cancel</span>
+          </a>
+        </div>
+    </div>
+</div>        <div class="inner">
+          <div class="frame clearfix">
+            <div class="bgbtm">
+              <div class="bgltile">
+                <div class="bgrtile">
+                  <div class="bgl">
+                    <div class="bgr">
+                      <div class="bgctl">
+                        <div class="bgctr">
+                          <div class="bgcbl">
+                            <div class="bgcbr">
+                              <div class="box_content fullheight clearfix">    <div class="mid_content clearfix">
+
+    
+            <h2>Login to MyAdminSorted </h2>
+        <div class="form_section clearfix" id="login-form">
+          <form action="/app/login_step_one_check" method="post" novalidate>
+            <input type="hidden" name="_csrf_token" value="086174924283b6e3892ef0e16ad166312398f081" />
+
+             <div class="element">
+                <label for="username">Email or Username</label>
+                <input class="text email required" type="text" id="username" name="_username" value="" required="required" autofocus="autofocus" />
+             </div>
+
+              <div class="element">
+                <label for="password">Password</label>
+                <input class="text email required" type="password" id="password" name="_password" required="required" />
+              </div>
+
+              <div class="element">
+                  <div class="side-element">
+                    <input class="checkbox" id="remember-me" type="checkbox" id="remember_me" name="_remember_me" />
+                    <label for="remember-me">Remember me</label>
+                  </div>
+              </div>
+              <div class="actions">
+                <input type="submit" id="_submit" name="_submit" class="ybtn" value="Next" />
+              </div>
+          </form>
+      </div>
+      <div style="display:none">
+        <img src="/app/bundles/masfrontend/images/bg_shelf.png">
+        <img src="/app/bundles/masfrontend/images/folders.png">
+      </div>
+    <!--[if IE]>
+      <div id="download-cf">
+        <p>We have detected that you're using an older browser which unfortunately does not have the required technology to use our application.</p>
+        <p>In order to continue, please accept the terms and conditions and install Google Chrome Frame for your browser.</p>
+        <p>It will provide the required technology without having to switch or use a different web browser.</p>
+        <div id="chrome_frame" class="element">
+          <input type="checkbox" class="checkbox" name="check_google_chrome_frame" id="check_google_chrome_frame" />&nbsp; <label for="check_google_chrome_frame">I accept I must install the <a href="javascript:;"> &copy; Google Chrome Frame</a> to use the MyAdminSorted web application.</label>
+        </div>
+      </div>
+    <div><iframe scrolling="no" frameborder="0" id="chrome_iframe" iframeborder=0 style="display: none; margin:15px 0 0 -100px; border: 0; width: 750px; height: 390px; overflow: hidden;" src=""></iframe></div>
+    <script type="text/javascript" 
+     src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
+    <style>
+     /* 
+      CSS rules to use for styling the overlay:
+        .chromeFrameOverlayContent
+        .chromeFrameOverlayContent iframe
+        .chromeFrameOverlayCloseBar
+        .chromeFrameOverlayUnderlay
+     */
+    </style> 
+
+    <script>
+     // You may want to place these lines inside an onload handler
+     CFInstall.check({
+       mode: "overlay",
+       url: "http://www.google.com/chromeframe/eula.html?user=true"
+     });
+    </script>
+  <![endif]-->
+</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  <script type="text/javascript">
+    var MTIProjectId='c5822006-6c75-4bbc-ab4f-fe586059efd3';
+    (function() {
+      var mtiTracking = document.createElement('script');
+      mtiTracking.type='text/javascript';
+      mtiTracking.async='true';
+      mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.com/t/trackingCode.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+    })();
+  </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script type="text/javascript" src="/app/js/50023c6.js?v1"></script>
+        <script>
+    itemStatusArray = {"item_status_LOGIN_FAILURE":"Login Failed","item_status_USER_ACTION_REQUIRED":"Enter MFA credentials","item_status_NOT_LINKED":"Unlinked"};
+    (function( MasAppUrls, $, undefined ) {
+      var routes = new Array();
+
+      MasAppUrls.base_url = '/app';
+      MasAppUrls.app_url_prefix = '/app'; // FIXME get this from app cfg
+
+      routes['ajax_refresh_account'] = '/app/account/__type__/__accountId__/refresh';
+      routes['ajax_change_category'] = '/app/change_category/__accountId__';
+      routes['ajax_account_docs_list'] = '/app/account/docs_list/__type__/__uid__';
+      routes['account_index'] = '/app/account/__type__/__uid__';
+      routes['ajax_remove_account'] = '/app/remove/account/__accountId__';
+      routes['ajax_remove_element'] = '/app/remove/element/__elementId__';
+      routes['ajax_box_file_rename'] = '/app/box-file/__boxId__/rename/__newName__';
+      routes['ajax_box_change_ribbon'] = '/app/box-file/__boxId__/set_ribbon/__ribbon__';
+      routes['ajax_shelf_account_in_element'] = '/app/box-file/__boxId__/assign/__providerId__';
+      routes['ajax_shelf_manage_item'] = '/app/box-file/__boxId__/reassign/__itemType__/__itemUid__';
+      routes['ajax_shelf_manage_items'] = '/app/box-file/__boxId__/reassign';
+      routes['linking_step3'] = '/app/linking/step3';
+      routes['fso_manager_upload'] = '/app/fsoManager/upload';
+      routes['fso_manager_rm'] = '/app/fsoManager/rm';
+      routes['ajax_shelf_element_position'] = '/app/shelf/update_position';
+      routes['linking_form'] = '/app/linking/form/__providerId__/__elementId__';
+      routes['ajax_elements_into_shelves'] = '/app/box-file/assign_all';
+      routes['file_preview'] = '/app/preview/__fileId__/__page__';
+      routes['message_preview'] = '/app/message/__messageId__';
+      routes['ajax_mark_unread'] = '/app/inbox/__fileId__';
+      routes['ajax_delete_message'] = '/app/inbox/__fileId__';
+      routes['ajax_user_mkdir'] = '/app/user/mkdir';
+      routes['file_index'] = '/app/box-file/__boxId__/__content__';
+      routes['linking_coming_soon'] = '/app/linking/linking_coming_soon';
+
+      /**
+       * MasAppUrls.path({'name':'ajax_remove_account', 'accountId':18})
+       */
+      MasAppUrls.path = function(path) {
+        var retVal = routes[path.name];
+        $.each(path, function(name, val) {
+          retVal = retVal.replace('__'+name+'__', val);
+        });
+        return retVal;
+      };
+
+    }( window.MasAppUrls = window.MasAppUrls || {}, jQuery ));
+  </script>  
+</body>
+</html>

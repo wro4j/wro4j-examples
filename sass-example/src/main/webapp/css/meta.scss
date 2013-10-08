@@ -1,0 +1,141 @@
+
+@import "mixins.scss";
+
+.box_content { padding:10px 0; position:relative; min-height:400px; 
+  .mid_content { width:500px; margin:0 auto; }
+  .central_content { width:90%; margin:0 auto; }
+  .left_content { float:left; width:57%; padding:0; position:relative; margin:0 0 0 5%; }
+  .right_content { float:left; width:35%; padding:20px 0 0 0; 
+    .inner { background:#f5f9fc; padding: 10px; border:1px solid #c9e4ef; 
+      h2 { display:block; float:none; padding:0 0 25px 0; }
+      p { display:block; float:none; padding:0 0 10px 0; }
+    }
+  }
+  .msg_content { float:left; width:500px; padding:0 0 40px 0; 
+    .inner { background:#f5f9fc; padding: 10px; border:1px solid #c9e4ef; 
+      h2 { display:block; float:none; padding:0 0 25px 0; }
+      p { display:block; float:none; padding:0 0 10px 0; }
+    }
+  }
+  .separator { float:left; width:100%; border-bottom:1px dotted #aaa; margin:15px 0 15px -25px; }
+  h2 { float:left; width:100%; margin:0px; padding:10px 0 15px 0; font-size:22px; }
+  h3 { float:left; width:100%; margin:0px; padding:0 0 10px 0; font-size:25px; }
+  .login_error { float: left; width: 500px; top:30px; padding: 14px 0 30px 0; color:#b5382a; font-weight:bold; font-size: 17px; }
+  .main_error { float: left; width: 100%; padding: 14px 0 30px 0; color:#b5382a; font-weight:bold; font-size: 17px; }
+  .form_section { float:left; width:100%; padding:20px 0 0 0; 
+    form { float:left; width:500px; padding-top: 5px;
+      .element { float:left; clear:both; width:430px; padding:5px 0px; 
+        label { float:left; font-size:15px; line-height:40px; width:150px; margin: 0; 
+          &.error { float:right; width:275px; color:#b5382a; padding:10px 0 10px 0; line-height:15px; height:auto; }
+        }
+        input.text { width:255px; line-height:36px; height:36px; padding:0px 10px; @include border-radius(3px); border:1px solid #b2b2b2; @include box-shadow(rgba(200, 200, 200, 1) 0px 0px 8px 0px inset); position:relative; }
+        input.narrow { width:25px; }
+        input.postcode { width:100px; float:left; }
+        input.pin { text-align: center; width: 25px; margin: 0 10px 0 0; }
+        input.checkbox { margin:14px 0 0 0; }
+        span.hint { float:left; padding:10px 0 5px 153px; font-size:14px; }
+        span.lhint { padding-left:0px; }
+        &.narrow { width:200px; clear:none; }
+        &.pins { position:relative; padding:40px 0 0 0; }
+        &.top-padding { padding:20px 0 0 0; }
+        input[type=password] { letter-spacing: 4px; }
+      }
+      .terms { padding:20px 0 0 0; 
+        input { float:left; margin:14px 20px  0 0; }
+        label { float:left; width:auto; margin-left: 5px; }
+      }
+      .actions { float:left; clear:both; padding: 30px 0 40px 150px;
+        &.lactions { padding-left:0px; }
+        #signup { padding: 21px 17px; font-size: 21px; line-height: 0px; }
+        input { padding: 21px 17px; font-size: 21px; line-height: 0px;text-decoration: none; color: #293142; }
+      }
+      #chrome_frame { display: none;
+        input { float: left; }
+        label { position: absolute; width: 700px; margin-left: 5px; }
+      }
+    }
+  }
+  .completed { line-height:25px; text-align:center; margin-top: 30px; }
+  .top_element { float: left; width: 100%; padding: 0; border-bottom: 1px dotted #cfcdca; margin: 0 0 10px 0; }
+  p { padding:0 0 10px 0; margin:0px; }
+  a { color: #5a9cd6; text-decoration: none;
+    &:hover { text-decoration:underline; }
+  }
+  .failed-verification .hide { display:none; padding:10px 0 0 0; }
+  .validation-status { display: none; padding: 20px; position: absolute; right: 30px; margin-top: -2px; 
+    &.success { display: block; background: url(../images/validation-feedback.png) 0 0 no-repeat; }
+    &.fail { display: block; background: url(../images/validation-feedback.png) 0 -40px no-repeat; }
+  }
+  .vmethods { float:left; width:100%; padding:15px 0 0 0; margin:15px 0 0 0; border-top:1px dotted #cfcdca; 
+    .simage { background-size: 326px; }
+  }
+  .simage { float: left; clear: none; width: 108px; height: 108px; padding: 0; margin: 0 15px 15px 0; background: url(../images/simage.png) 0 0 no-repeat; background-size: 244px; }
+  .simage_01 { background-position: top left; }
+  .simage_02 { background-position: top center; }
+  .simage_03 { background-position: top right; }
+  .simage_04 { background-position: center left; }
+  .simage_05 { background-position: center center; }
+  .simage_06 { background-position: center right; }
+  .simage_07 { background-position: bottom left; }
+  .simage_08 { background-position: bottom center; }
+  .simage_09 { background-position: bottom right; }
+  .si_wrap { float:left; width:390px; padding:10px 0 20px 0; 
+    a { float:left; margin:10px 10px 3px 3px; 
+      &:hover { margin:7px 7px 0 0; border:3px solid #5a9cd6; }
+      &.selected { margin:7px 7px 0 0; border:3px solid #5a9cd6; }
+    }
+    .simage { margin:0px; }
+    &.smwrap { width:280px; 
+      a span { width:80px; height:80px; }
+    }
+  }
+  .phrase { float: right; clear: none; width: 350px; height: 108px; padding: 0 10px; margin: 0px 0px 15px 0;
+    table { width:100%;
+      td { width: 100%; text-align: center; font-size: 15px; color: #414141; vertical-align: middle; height: 108px; }
+    }
+  }
+  .pins {
+    span.num1 { float:left; position:absolute; left: 160px; top:8px; }
+    span.num2 { float:left; position:absolute; left: 225px; top:8px; }
+  }
+  .captcha { float:left; width:277px; 
+    img { margin:0 0 5px 0; }
+  }
+}
+
+.popup_terms { display:none; width:980px; background:#fff; background-color: #fff; @include border-radius(5px); 
+  .header { float:left; width:100%; background:#f5f9fc; position:relative; @include border-radius(5px 5px 0 0); 
+    h1 { font-size:14px; margin:0px; padding:15px 0 15px 30px;  }
+    .bClose { float:left; cursor: pointer; position: absolute; right: -18px; top: -17px; 
+      span { float:left; }
+    }
+  }
+  .inner { float:left; width:920px; padding:30px; height:500px; overflow:auto; border-top:1px solid #c9e4ef; 
+    h1 { font-size:20px; margin:0px; padding:0 0 20px 0; background:none; }
+    h2 { font-size:19px; margin:0px; padding:0 0 20px 0; }
+    h3 { font-size:18px; margin:0px; padding:0 0 20px 0; }
+    h4 { font-size:17px; margin:0px; padding:0 0 20px 0; }
+    h5 { font-size:16px; margin:0px; padding:0 0 20px 0; }
+    h6 { font-size:15px; margin:0px; padding:0 0 20px 0; }
+    p { margin:0; padding:0 0 20px 0; }
+  }
+}
+
+
+.generic_form {
+  div { float:left; width:400px; padding:5px 0px;
+    label { float:left; font-size:15px; line-height:40px; width:120px; margin: 0; height:40px; overflow:hidden; 
+      &.terms { float:right; width:230px; }
+    }
+    input.text { float:right; margin:0px; width:255px; line-height:36px; height:36px; padding:0px 10px; @include border-radius(3px); border:1px solid #b2b2b2; @include box-shadow(rgba(200, 200, 200, 1) 0px 0px 8px 0px inset); position:relative; }
+    input.postcode { float:left; width:100px; margin:0 0 0 3px; }
+    input.checkbox { margin:14px 27px 0 0; float:right; }
+    label.error { float:right; width:275px; color:#b5382a; padding:10px 0 10px 0; line-height:15px; height:auto; }
+    ul { float:right; width:275px;
+      li { color:#b5382a; padding:10px 0 10px 0; }
+    }
+  }
+  .actions { float:left; width:100%; padding: 30px 0 20px 0px;
+    input { padding: 0 11px; font-size: 14px; line-height: 28px; text-decoration: none; color: #293142; }
+  }
+}

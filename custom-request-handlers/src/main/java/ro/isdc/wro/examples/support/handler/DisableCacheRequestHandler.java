@@ -55,7 +55,7 @@ public class DisableCacheRequestHandler extends RequestHandlerSupport {
 
         final RequestDispatcher dispatcher = request.getRequestDispatcher(requestUri);
         try {
-            // required to avoid stackoverflow exception (when the same request is handled by the same requestHandler.
+            // required to avoid stackoverflow exception (when the request is handled by the same requestHandler more then once).
             markAsHandled(request);
             dispatcher.forward(request, response);
         } catch (final ServletException e) {

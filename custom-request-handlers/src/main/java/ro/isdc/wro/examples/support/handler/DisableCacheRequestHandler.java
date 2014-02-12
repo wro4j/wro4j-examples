@@ -22,7 +22,10 @@ import ro.isdc.wro.model.group.Inject;
 import ro.isdc.wro.model.resource.ResourceType;
 
 /**
- * This RequestHandler will reload the cache only for a specific group.
+ * This RequestHandler will reload the cache only for a specific group. When the requested url contains a param, it will invalidate the
+ * cache for that group and will get the most recent version of processed resources.
+ * <p/>
+ * Example of request handled by this handler: <code>/wro/zengarden.css?disableCache=true</code>
  */
 public class DisableCacheRequestHandler extends RequestHandlerSupport {
     private static final Logger LOG = LoggerFactory.getLogger(DisableCacheRequestHandler.class);
@@ -50,9 +53,9 @@ public class DisableCacheRequestHandler extends RequestHandlerSupport {
         LOG.debug("invalidating cacheKey: {}", cacheKey);
         cacheStrategy.put(cacheKey, null);
 
-
         final RequestDispatcher dispatcher = request.getRequestDispatcher(requestUri);
         try {
+            // required to avoid stackoverflow exception (when the same request is handled by the same requestHandler.
             markAsHandled(request);
             dispatcher.forward(request, response);
         } catch (final ServletException e) {
@@ -63,7 +66,6 @@ public class DisableCacheRequestHandler extends RequestHandlerSupport {
     private void markAsHandled(final HttpServletRequest request) {
         request.setAttribute(DisableCacheRequestHandler.class.getName(), true);
     }
-
 
     private boolean wasHandled(final HttpServletRequest request) {
         return request.getAttribute(DisableCacheRequestHandler.class.getName()) != null;

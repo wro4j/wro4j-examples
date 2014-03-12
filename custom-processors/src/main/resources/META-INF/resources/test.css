@@ -1,0 +1,7 @@
+#cssUrlRewritingBug {
+    background-image: url(satellite.jpg);
+    color: #fff;
+    height: 100px;
+    font-weight: bold;
+    font-size: 3em;
+}

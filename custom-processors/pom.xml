@@ -9,7 +9,7 @@
     <name>wro4j custom processors example</name>
     <properties>
         <project_charset>UTF-8</project_charset>
-        <wro4j.version>1.7.1</wro4j.version>
+        <wro4j.version>1.7.3</wro4j.version>
     </properties>
     <dependencies>
         <!-- Project Dependencies -->
@@ -49,7 +49,7 @@
             <plugin>
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
-                <version>1.7.0</version>
+                <version>1.7.3</version>
                 <executions>
                     <execution>
                         <goals>

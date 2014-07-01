@@ -12,7 +12,7 @@
     <name>wro4j standalone example</name>
     <properties>
         <project_charset>UTF-8</project_charset>
-	<wro4j.version>1.7.7-SNAPSHOT</wro4j.version>
+	<wro4j.version>1.7.6</wro4j.version>
     </properties>
     <dependencies>
         <!-- Project Dependencies -->

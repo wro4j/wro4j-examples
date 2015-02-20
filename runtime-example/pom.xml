@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ro.isdc.wro4j.examples</groupId>
+    <artifactId>runtime-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>wro4j custom processors example</name>
+    <properties>
+        <project_charset>UTF-8</project_charset>
+        <wro4j.version>1.7.7</wro4j.version>
+    </properties>
+    <dependencies>
+        <!-- Project Dependencies -->
+        <dependency>
+            <groupId>ro.isdc.wro4j</groupId>
+            <artifactId>wro4j-extensions</artifactId>
+            <version>${wro4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+    <!--  
+        <resources>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/webapp</directory>
+            </resource>
+        </resources>
+        -->
+    </build>
+</project>

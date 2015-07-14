@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro">
+    
+    <group name="all">
+        <js>/static/script.js</js>
+        <css>/static/style.css</css>
+        <group-ref>bootstrap</group-ref>
+    </group>
+
+    
+    <group name="bootstrap">
+        <js>/webjars/jquery/2.1.4/jquery.min.js</js>
+        <css>/webjars/bootstrap/3.3.5/css/bootstrap.min.css</css>
+        <css>/webjars/bootstrap/3.3.5/css/bootstrap-theme.min.css</css>
+        <js>/webjars/bootstrap/3.3.5/js/bootstrap.min.js</js>
+    </group>
+    
+</groups>

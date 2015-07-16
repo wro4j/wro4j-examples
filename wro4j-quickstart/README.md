@@ -1,5 +1,6 @@
 # heroku-simple-web-app
-Quickstart wro4j application. This application can be deployed on heroku (all configurations are ready).
+Quickstart wro4j application. 
+This application is deployed on [heroku](http://wro4j-quickstart.herokuapp.com/).
 
 The application uses webjars provided as maven dependencies which are bundled inside a single resource merged by wro4j.
 

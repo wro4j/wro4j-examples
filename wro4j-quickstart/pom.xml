@@ -14,7 +14,7 @@
         </license>
     </licenses>
     <properties>
-        <jetty.version>9.3.0.v20150612</jetty.version>
+        <jetty.version>9.2.12.v20150709</jetty.version>
         <wro4j.version>1.7.8</wro4j.version>
     </properties>
     <dependencies>
@@ -33,8 +33,13 @@
             <artifactId>wro4j-extensions</artifactId>
             <version>${wro4j.version}</version>
         </dependency>
-        
+
         <!-- webjars -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-servlet-2.x</artifactId>
+            <version>1.1</version>
+        </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
@@ -45,16 +50,46 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.5</version>
         </dependency>
-        
+
         <!-- Jetty required for Heroku boostrap app -->
         <dependency>
             <groupId>org.eclipse.jetty.aggregate</groupId>
             <artifactId>jetty-all</artifactId>
             <version>${jetty.version}</version>
-            <classifier>uber</classifier>
             <scope>compile</scope>
         </dependency>
-
+        <!-- JETTY and Servlet 
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-annotations</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jsp</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jndi</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>apache-jsp</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        -->
     </dependencies>
     <build>
         <resources>
@@ -111,41 +146,32 @@
                     <downloadSources>true</downloadSources>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> <version>2.4</version> 
+                <executions> <execution> <id>copy-dependencies</id> <phase>package</phase> <goals> <goal>copy-dependencies</goal> </goals> 
+                </execution> </executions> </plugin> -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
-                <version>1.1.1</version>
+                <version>1.10</version>
+                <configuration>
+                    <programs>
+                        <program>
+                            <mainClass>Start</mainClass>
+                            <id>app</id>
+                        </program>
+                    </programs>
+                    <repositoryLayout>flat</repositoryLayout>
+                    <useWildcardClassPath>true</useWildcardClassPath>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>assemble</goal>
                         </goals>
-                        <configuration>
-                            <assembleDirectory>target</assembleDirectory>
-                            <generateRepository>false</generateRepository>
-                            <extraJvmArguments>-Xmx512m</extraJvmArguments>
-                            <programs>
-                                <program>
-                                    <mainClass>Start</mainClass>
-                                    <name>webapp</name>
-                                </program>
-                            </programs>
-                        </configuration>
+                        <!-- <configuration> <assembleDirectory>target</assembleDirectory> <generateRepository>false</generateRepository> 
+                            <extraJvmArguments>-Xmx512m</extraJvmArguments> <programs> <program> <mainClass>Start</mainClass> <name>webapp</name> </program> 
+                            </programs> </configuration> -->
                     </execution>
                 </executions>
             </plugin>

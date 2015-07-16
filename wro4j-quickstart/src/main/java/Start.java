@@ -14,6 +14,7 @@ public class Start {
 		final Server server = new Server(Integer.valueOf(webPort));
 		final WebAppContext root = new WebAppContext();
 		root.setContextPath("/");
+		root.setCompactPath(true);
 		root.setDescriptor(webappDirLocation + "/WEB-INF/web.xml");
 		root.setResourceBase(webappDirLocation);
 		root.setParentLoaderPriority(true);

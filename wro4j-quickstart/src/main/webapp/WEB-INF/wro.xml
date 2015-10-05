@@ -5,6 +5,7 @@
         <js>/static/script.js</js>
         <css>/static/style.css</css>
         <group-ref>bootstrap</group-ref>
+        <group-ref>angular</group-ref>
     </group>
 
     
@@ -13,6 +14,15 @@
         <css>/webjars/bootstrap/3.3.5/css/bootstrap.min.css</css>
         <css>/webjars/bootstrap/3.3.5/css/bootstrap-theme.min.css</css>
         <js>/webjars/bootstrap/3.3.5/js/bootstrap.min.js</js>
+    </group>
+    
+    <group name="angular">
+    <!-- 
+        <js>webjar:angularjs/1.4.3/i18n/angular-locale_de-at.js</js>
+        
+        <js>classpath:META-INF/resources/webjars/angularjs/*/i18n/angular-locale_de-at.js</js>
+         -->
+        <js>classpath:META-INF/resources/webjars/angularjs/1.4.3/i18n/*.js</js>
     </group>
     
 </groups>

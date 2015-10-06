@@ -10,14 +10,14 @@
         <css>classpath:META-INF/resources/webjars/flag-icon-css/0.7.1/css/flag-icon.min.css</css>
         <css>/static/site.css</css>
 
-        <js>webjar:jquery/2.1.1/jquery.min.js</js>
-        <js>webjar:angularjs/1.4.4/angular.min.js</js>
-        <js>webjar:angularjs/1.4.4/angular-route.min.js</js>
-        <js>webjar:angularjs/1.4.4/angular-cookies.min.js</js>
-        <js>webjar:angularjs/1.4.4/angular-animate.min.js</js>
-        <js>webjar:angular-resource/1.4.5/angular-resource.min.js</js>
-        <js>webjar:angular-translate/2.7.2/angular-translate.min.js</js>
-        <js>webjar:bootstrap/3.3.5/js/bootstrap.min.js</js>
+        <js>/webjars/jquery/2.1.1/jquery.min.js</js>
+        <js>/webjars/angularjs/1.4.4/angular.min.js</js>
+        <js>/webjars/angularjs/1.4.4/angular-route.min.js</js>
+        <js>/webjars/angularjs/1.4.4/angular-cookies.min.js</js>
+        <js>/webjars/angularjs/1.4.4/angular-animate.min.js</js>
+        <js>/webjars/angular-resource/1.4.5/angular-resource.min.js</js>
+        <js>/webjars/angular-translate/2.7.2/angular-translate.min.js</js>
+        <js>/webjars/bootstrap/3.3.5/js/bootstrap.min.js</js>
     </group>
 
 </groups>

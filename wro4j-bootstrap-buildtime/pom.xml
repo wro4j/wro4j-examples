@@ -96,6 +96,12 @@
                 <filtering>false</filtering>
                 <directory>src/main/resources</directory>
             </resource>
+            <!-- 
+            <resource>
+                <filtering>false</filtering>
+                <directory>${project.build.directory}/generated-resources/</directory>
+            </resource>
+             -->
             <resource>
                 <filtering>false</filtering>
                 <directory>src/main/java</directory>
@@ -133,7 +139,9 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <destinationFolder>${basedir}/src/main/webapp/wro</destinationFolder>
                     <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
+                    <incrementalBuildEnabled>true</incrementalBuildEnabled>
                 </configuration>
             </plugin>
             <plugin>

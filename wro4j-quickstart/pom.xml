@@ -15,7 +15,7 @@
     </licenses>
     <properties>
         <jetty.version>9.2.12.v20150709</jetty.version>
-        <wro4j.version>1.7.8</wro4j.version>
+        <wro4j.version>1.8.0</wro4j.version>
     </properties>
     <dependencies>
         <dependency>

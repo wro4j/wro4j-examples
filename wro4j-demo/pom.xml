@@ -15,7 +15,7 @@
     <name>wro4j demo</name>
 
     <properties>
-        <wicket.version>1.5.2</wicket.version>
+        <wicket.version>7.17.0</wicket.version>
         <gae.version>1.5.4</gae.version>
         <jetty.version>8.1.8.v20121106</jetty.version>
         <dwr.version>3.0.M1</dwr.version>

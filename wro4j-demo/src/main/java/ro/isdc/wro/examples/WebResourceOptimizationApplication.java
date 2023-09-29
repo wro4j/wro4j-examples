@@ -11,18 +11,13 @@ import ro.isdc.wro.examples.page.HomePage;
 /**
  * Application object for your web application. If you want to run this application without deploying, run the Start
  * class.
- *
- * @see wicket.myproject.Start#main(String[])
  */
 public class WebResourceOptimizationApplication extends WebApplication {
-  /**
-   * @see wicket.Application#getHomePage()
-   */
+
   @Override
   public Class<? extends WebPage> getHomePage() {
     return HomePage.class;
   }
-
 
   /**
    * {@inheritDoc}

@@ -5,16 +5,16 @@ package ro.isdc.wro.examples.http;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletResponse;
 import ro.isdc.wro.model.resource.ResourceType;
 import ro.isdc.wro.model.resource.locator.support.DispatcherStreamLocator;
 
@@ -41,7 +41,7 @@ public class DispatchResourceServlet extends HttpServlet {
 
 
     InputStream stream = streamLocator.getInputStream(wrapRequestForNoGzip(req), resp, location);
-    combo.append(IOUtils.toString(stream));
+    combo.append(IOUtils.toString(stream, StandardCharsets.UTF_8));
 
 //    location = "/wro/wildcard.js";
 //    stream = streamLocator.getInputStream(wrapRequestForNoGzip(req), resp, location);
@@ -62,7 +62,7 @@ public class DispatchResourceServlet extends HttpServlet {
   private HttpServletRequest wrapRequestForNoGzip(final HttpServletRequest req) {
     return new HttpServletRequestWrapper(req) {
       @Override
-      public Enumeration getHeaderNames() {
+      public Enumeration<String> getHeaderNames() {
         return null;
       }
     };

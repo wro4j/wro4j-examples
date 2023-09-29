@@ -1,3 +1,5 @@
+bin/
+target/
 *.class
 
 # Package Files #
@@ -6,3 +8,10 @@
 *.ear
 .idea/*
 *.iml
+*~
+
+# Eclipse IDE
+.classpath
+.externalToolBuilders/
+.project
+.settings/

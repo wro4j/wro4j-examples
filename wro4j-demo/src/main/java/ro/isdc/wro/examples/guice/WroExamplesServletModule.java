@@ -2,13 +2,15 @@ package ro.isdc.wro.examples.guice;
 
 import java.util.Map;
 
-import javax.servlet.FilterConfig;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.wicket.protocol.http.ContextParamWebApplicationFactory;
 import org.apache.wicket.protocol.http.WicketFilter;
-import org.directwebremoting.servlet.DwrServlet;
 
+import com.google.common.collect.Maps;
+import com.google.inject.Singleton;
+import com.google.inject.servlet.ServletModule;
+
+import jakarta.servlet.FilterConfig;
 import ro.isdc.wro.examples.ExternalResourceServlet;
 import ro.isdc.wro.examples.WebResourceOptimizationApplication;
 import ro.isdc.wro.examples.http.DispatchResourceServlet;
@@ -20,10 +22,6 @@ import ro.isdc.wro.extensions.http.CoffeeScriptFilter;
 import ro.isdc.wro.extensions.http.LessCssFilter;
 import ro.isdc.wro.http.WroContextFilter;
 
-import com.google.common.collect.Maps;
-import com.google.inject.Singleton;
-import com.google.inject.servlet.ServletModule;
-
 /**
  * @author Alex Objelean
  */
@@ -34,7 +32,6 @@ final class WroExamplesServletModule extends ServletModule {
     //bindings
     bind(WroFilterWithCustomRequestHandlers.class).in(Singleton.class);
     bind(WicketFilter.class).in(Singleton.class);
-    bind(DwrServlet.class).in(Singleton.class);
     bind(ExternalResourceServlet.class).in(Singleton.class);
     bind(DynamicResourceServlet.class).in(Singleton.class);
     bind(RandomCssResourceServlet.class).in(Singleton.class);
@@ -54,7 +51,6 @@ final class WroExamplesServletModule extends ServletModule {
 //    filter("*.coffee").through(CoffeeScriptFilter.class);
 
     //servlets
-    serve("/dwr/*").with(DwrServlet.class);
     serve("/external/*").with(ExternalResourceServlet.class);
     serve("/resource/dynamic.js").with(DynamicResourceServlet.class);
     serve("/resource/random.css").with(RandomCssResourceServlet.class);

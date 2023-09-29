@@ -1,14 +1,20 @@
 package ro.isdc.wro.filters;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.FileInputStream;
-import java.io.IOException;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class HtmlFilter implements Filter {
 
@@ -21,7 +27,6 @@ public class HtmlFilter implements Filter {
 
     this.contextPath = contextPath;
     this.webappDirectory = webappDirectory;
-
   }
 
   @Override

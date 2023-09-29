@@ -4,20 +4,20 @@
         xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
 
     <group name="angular-bootstrap">
-        <css>/webjars/bootstrap/3.3.5/css/bootstrap.min.css</css>
-        <css>/webjars/bootstrap/3.3.5/css/bootstrap-theme.min.css</css>
-        <css>/webjars/font-awesome/4.4.0/css/font-awesome.min.css</css>
+        <css>/webjars/bootstrap/5.3.2/css/bootstrap.min.css</css>
+        <css>/webjars/bootstrap/5.3.2/css/bootstrap-theme.min.css</css>
+        <css>/webjars/font-awesome/5.15.1/css/font-awesome.min.css</css>
         <css>/webjars/flag-icon-css/0.7.1/css/flag-icon.min.css</css>
         <css>/static/site.css</css>
 
-        <js>/webjars/jquery/2.1.1/jquery.min.js</js>
+        <js>/webjars/jquery/3.5.1/jquery.min.js</js>
         <js>/webjars/angularjs/1.4.4/angular.min.js</js>
         <js>/webjars/angularjs/1.4.4/angular-route.min.js</js>
         <js>/webjars/angularjs/1.4.4/angular-cookies.min.js</js>
         <js>/webjars/angularjs/1.4.4/angular-animate.min.js</js>
         <js>/webjars/angular-resource/1.4.5/angular-resource.min.js</js>
         <js>/webjars/angular-translate/2.7.2/angular-translate.min.js</js>
-        <js>/webjars/bootstrap/3.3.5/js/bootstrap.min.js</js>
+        <js>/webjars/bootstrap/5.3.2/js/bootstrap.min.js</js>
     </group>
 
 </groups>
